@@ -4,14 +4,14 @@ public:
         vector<vector<int>>ans;
         int size=nums.size();
         if(size<3){
-            
+
             return ans;
         }
         sort(nums.begin(),nums.end());
         int left,right;
         int target;
         bool c=false;
-        
+
         for(int i=0;i<size;++i){
             if(i>0&&nums[i-1]==nums[i]){
                 continue;
