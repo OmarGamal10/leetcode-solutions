@@ -6,7 +6,7 @@ public:
     int L = 0;
     for (int i = 0; i < n; i++) {
         curSum += nums[i];
-        if (i > 0 && (curSum<curSum - nums[L] || nums[i]>curSum)) {
+        if (i > 0 && (nums[i]>curSum)) {
             while (curSum < nums[i]) {
                 curSum -= nums[L];
                 L++;
