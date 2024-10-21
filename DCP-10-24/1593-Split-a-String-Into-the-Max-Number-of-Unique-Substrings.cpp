@@ -6,6 +6,8 @@ public:
             ans=max((int)curr.size(),ans);
             return;
         }
+        if(curr.size()+(s.size()-i)<=ans)
+            return;
         for(int j=i;j<=s.size();++j){
             string sub=s.substr(i,j-i+1);
             if(curr.count(sub))
