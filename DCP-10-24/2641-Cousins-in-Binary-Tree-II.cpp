@@ -16,17 +16,17 @@ public:
         queue<TreeNode*> que;
         vector<TreeNode*> vec;
         que.push(root);
-        root->val = 0;  // root has no cousins, so set to 0
+        root->val = 0;  
 
         while (!que.empty()) {
             int levelSize = que.size();
             int sumLevel = 0;
 
-            // First pass: calculate the sum of the current level and sibling values
+            
             for (int i = 0; i < levelSize; ++i) {
                 TreeNode* node = que.front();
                 que.pop();
-                map[i] = make_pair(0, 0); // initialize siblings' values
+                map[i] = make_pair(0, 0); 
 
                 if (node->left) {
                     que.push(node->left);
